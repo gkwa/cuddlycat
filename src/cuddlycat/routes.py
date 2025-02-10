@@ -2,6 +2,26 @@ import pathlib
 import fastapi
 import fastapi.responses
 from .models import Business
+from pydantic import BaseModel
+
+
+class PageContent(BaseModel):
+    encoding: str
+    mimeType: str
+    data: str
+
+
+class PageMetadata(BaseModel):
+    url: str
+    title: str
+    timestamp: str
+    savedAt: str
+    uuid: str
+
+
+class PageData(BaseModel):
+    metadata: PageMetadata
+    content: PageContent
 
 
 def register_routes(app: fastapi.FastAPI):
@@ -41,6 +61,25 @@ def register_routes(app: fastapi.FastAPI):
             }
         except Exception as e:
             print(f"Error processing business data: {str(e)}")
+            raise fastapi.HTTPException(status_code=500, detail=str(e))
+
+    @app.post("/save")
+    async def save_page(data: PageData):
+        try:
+            print(f"\nReceived page data for URL: {data.metadata.url}")
+            print(f"Title: {data.metadata.title}")
+            print(f"UUID: {data.metadata.uuid}")
+
+            # Here you would add code to save to your storage backend
+            # For now, we'll just acknowledge receipt
+
+            return {
+                "status": "success",
+                "message": "Page data received successfully",
+                "metadata": data.metadata.model_dump(),
+            }
+        except Exception as e:
+            print(f"Error saving page data: {str(e)}")
             raise fastapi.HTTPException(status_code=500, detail=str(e))
 
     # Add route for debugging static files
