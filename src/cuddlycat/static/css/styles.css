@@ -26,7 +26,7 @@ pre {
   background-color: #0056b3;
 }
 
-#result {
+.result {
   margin-top: 20px;
   padding: 10px;
   border-radius: 5px;
@@ -40,4 +40,15 @@ pre {
 .error {
   background-color: #f8d7da;
   color: #721c24;
+}
+
+.yaml-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.yaml-preview {
+  margin-top: 10px;
 }
