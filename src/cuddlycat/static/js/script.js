@@ -1,5 +1,17 @@
 console.log("Loading script.js...")
 
+let businesses = { businesses: [] }
+
+async function loadBusinesses() {
+  try {
+    const response = await fetch("http://localhost:8080/api/businesses")
+    businesses = await response.json()
+    renderBusinessList()
+  } catch (error) {
+    console.error("Error loading businesses:", error)
+  }
+}
+
 async function postYaml(index) {
   const business = businesses.businesses[index]
   const resultDiv = document.getElementById(`result-${index}`)
@@ -19,13 +31,11 @@ async function postYaml(index) {
     }
 
     const data = await response.json()
-
-    // Store UUID in the Chrome extension's storage
     const message = {
       action: 'setUUID',
       uuid: business.uuid
     };
-    window.postMessage(message, '*');  // This will be caught by content.js
+    window.postMessage(message, '*');
 
     resultDiv.className = "success"
     if (business.yelp_url) {
@@ -56,10 +66,9 @@ function renderBusinessList() {
     return
   }
   
-  console.log("Found container, businesses:", businesses)
+  container.innerHTML = ''
   
   businesses.businesses.forEach((business, index) => {
-    console.log(`Creating section for business: ${index}`)
     const section = document.createElement("div")
     section.className = "yaml-section"
     
@@ -78,14 +87,9 @@ function renderBusinessList() {
   })
 }
 
-// Call renderBusinessList when the DOM is loaded
-document.addEventListener("DOMContentLoaded", function() {
-  console.log("DOMContentLoaded fired")
-  renderBusinessList()
-})
+document.addEventListener("DOMContentLoaded", loadBusinesses)
 
-// Backup call in case DOMContentLoaded already fired
 if (document.readyState === "complete") {
-  console.log("Document already complete, calling renderBusinessList")
-  renderBusinessList()
+  loadBusinesses()
 }
+

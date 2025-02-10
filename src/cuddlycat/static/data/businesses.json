@@ -1,0 +1,18 @@
+{
+ "businesses": [
+   {
+     "business_name": "Downtown Seattle Dentists",
+     "matched_name": "DOWNTOWN SEATTLE DENTISTS",
+     "yelp_url": "https://www.yelp.com/biz/downtown-seattle-dentists-seattle",
+     "message": "Found exact name match",
+     "uuid": "cf1551af-04cd-44ce-84c8-7b81a5f5cb98"
+   },
+   {
+     "business_name": "3Rd & Columbia Dental",
+     "matched_name": "3rd & Columbia Dental",
+     "yelp_url": "https://www.yelp.com/biz/3rd-and-columbia-dental-seattle-3",
+     "message": "Found exact name match",
+     "uuid": "c3115d28-4237-4fe2-825c-99bddd2a3741"
+   }
+ ]
+}
