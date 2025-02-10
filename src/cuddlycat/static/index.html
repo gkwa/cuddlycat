@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAML POST Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>YAML POST Demo</h1>
+    <p>Click the button below to POST the YAML data to localhost:8080/incoming</p>
+    
+    <a href="#" class="button" onclick="postYaml(); return false;">POST YAML Data</a>
+    
+    <div id="result"></div>
+    
+    <h2>YAML Content Preview:</h2>
+    <pre id="yamlPreview">
+metadata:
+  url: "https://www.yelp.com/biz/downtown-seattle-dentists-seattle"
+  title: "DOWNTOWN SEATTLE DENTISTS - Updated February 2025 - 81 Reviews - 509 Olive Way, Seattle, Washington - General Dentistry - Phone Number - Yelp"
+  timestamp: "2025-02-09T08:29:20.007Z"
+  savedAt: "2/9/2025, 12:29:20 AM"
+  uuid: "cf1551af-04cd-44ce-84c8-7b81a5f5cb98"
+content:
+  encoding: base64
+  mimeType: application/x-mimearchive
+  data: |</pre>
+
+    <script>
+        async function postYaml() {
+            const yamlData = {
+                metadata: {
+                    url: "https://www.yelp.com/biz/downtown-seattle-dentists-seattle",
+                    title: "DOWNTOWN SEATTLE DENTISTS - Updated February 2025 - 81 Reviews - 509 Olive Way, Seattle, Washington - General Dentistry - Phone Number - Yelp",
+                    timestamp: "2025-02-09T08:29:20.007Z",
+                    savedAt: "2/9/2025, 12:29:20 AM",
+                    uuid: "cf1551af-04cd-44ce-84c8-7b81a5f5cb98"
+                },
+                content: {
+                    encoding: "base64",
+                    mimeType: "application/x-mimearchive",
+                    data: ""
+                }
+            };
+
+            const resultDiv = document.getElementById('result');
+            
+            try {
+                const response = await fetch('http://localhost:8080/incoming', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(yamlData)
+                });
+
+                if (response.ok) {
+                    resultDiv.className = 'success';
+                    resultDiv.textContent = 'Data successfully posted!';
+                } else {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+            } catch (error) {
+                resultDiv.className = 'error';
+                resultDiv.textContent = `Error posting data: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
