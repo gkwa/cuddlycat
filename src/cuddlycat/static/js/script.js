@@ -20,6 +20,13 @@ async function postYaml(index) {
 
     const data = await response.json()
 
+    // Store UUID in the Chrome extension's storage
+    const message = {
+      action: 'setUUID',
+      uuid: business.uuid
+    };
+    window.postMessage(message, '*');  // This will be caught by content.js
+
     resultDiv.className = "success"
     if (business.yelp_url) {
       resultDiv.innerHTML = `${data.message}<br><a href="${business.yelp_url}" target="_blank">Click here to view on Yelp</a>`
