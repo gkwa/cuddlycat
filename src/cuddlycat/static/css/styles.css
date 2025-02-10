@@ -10,6 +10,7 @@ pre {
   padding: 15px;
   border-radius: 5px;
   overflow-x: auto;
+  font-size: 14px;
 }
 
 .button {
@@ -49,6 +50,21 @@ pre {
   border-radius: 5px;
 }
 
+.yaml-section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
 .yaml-preview {
   margin-top: 10px;
+  font-size: 13px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }

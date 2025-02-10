@@ -1,30 +1,79 @@
 import pathlib
 import fastapi
 import fastapi.responses
-from .models import YAMLData
+from .models import Business
+
 
 def register_routes(app: fastapi.FastAPI):
     static_path = pathlib.Path(__file__).parent / "static"
 
+    # Add debug logging for static file serving
+    print(f"Static path: {static_path}")
+    print(f"Static path exists: {static_path.exists()}")
+    if static_path.exists():
+        print("Static directory contents:", list(static_path.glob("**/*")))
+
     @app.get("/")
     async def root():
-        return fastapi.responses.FileResponse(static_path / "index.html")
+        index_path = static_path / "index.html"
+        print(f"Serving index from: {index_path}")
+        print(f"Index exists: {index_path.exists()}")
+        return fastapi.responses.FileResponse(index_path)
+
+    @app.get("/healthcheck")
+    async def healthcheck():
+        return {"status": "healthy"}
 
     @app.post("/incoming")
-    async def receive_yaml(data: YAMLData):
+    async def receive_yaml(data: Business):
         try:
-            print("Received YAML data:")
-            print(f"URL: {data.metadata.url}")
-            print(f"Title: {data.metadata.title}")
-            print(f"Timestamp: {data.metadata.timestamp}")
-            print(f"Saved At: {data.metadata.savedAt}")
-            print(f"UUID: {data.metadata.uuid}")
-            print(f"Content Type: {data.content.mimeType}")
-            
-            # Here you would add your actual data processing
-            # If something goes wrong, raise an exception
-            
-            return {"status": "success", "message": "Data received and processed successfully"}
+            print("\nReceived business data:")
+            print(f"Business Name: {data.business_name}")
+            print(f"Matched Name: {data.matched_name}")
+            print(f"Yelp URL: {data.yelp_url}")
+            print(f"Message: {data.message}")
+            print(f"UUID: {data.uuid}")
+
+            return {
+                "status": "success",
+                "message": "Business data received successfully",
+                "data": data.model_dump(),
+            }
         except Exception as e:
+            print(f"Error processing business data: {str(e)}")
             raise fastapi.HTTPException(status_code=500, detail=str(e))
 
+    # Add route for debugging static files
+    @app.get("/debug/static-files")
+    async def debug_static_files():
+        try:
+            files = list(static_path.glob("**/*"))
+            return {
+                "static_path": str(static_path),
+                "exists": static_path.exists(),
+                "files": [str(f) for f in files],
+            }
+        except Exception as e:
+            return {
+                "error": str(e),
+                "static_path": str(static_path),
+                "exists": static_path.exists() if static_path else False,
+            }
+
+    # Add route to check file contents
+    @app.get("/debug/file-contents/{filename:path}")
+    async def debug_file_contents(filename: str):
+        try:
+            file_path = static_path / filename
+            if not file_path.exists():
+                return {"error": f"File not found: {filename}"}
+
+            content = file_path.read_text()
+            return {
+                "filename": filename,
+                "exists": True,
+                "size": len(content),
+                "content": content[:1000],  # First 1000 chars for safety
+            }
+        except Exception as e:
+            return {"error": str(e)}

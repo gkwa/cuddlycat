@@ -1,20 +1,9 @@
 from pydantic import BaseModel
 
 
-class Content(BaseModel):
-    encoding: str
-    mimeType: str
-    data: str
-
-
-class Metadata(BaseModel):
-    url: str
-    title: str
-    timestamp: str
-    savedAt: str
+class Business(BaseModel):
+    business_name: str
+    matched_name: str
+    yelp_url: str
+    message: str
     uuid: str
-
-
-class YAMLData(BaseModel):
-    metadata: Metadata
-    content: Content
