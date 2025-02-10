@@ -26,5 +26,8 @@ const yamlDataList = [
       mimeType: "application/x-mimearchive",
       data: "",
     },
-  },
-]
+  }
+];
+
+// Add console log to verify data is loaded
+console.log('YAML data loaded:', yamlDataList);
