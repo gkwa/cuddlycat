@@ -27,6 +27,17 @@ class PageData(BaseModel):
 def register_routes(app: fastapi.FastAPI):
     static_path = pathlib.Path(__file__).parent / "static"
 
+    js_path = static_path / "js"
+
+    # Add debug logging for static file serving
+    print(f"Static path: {static_path}")
+    print(f"JS path: {js_path}")
+    print(f"Static path exists: {static_path.exists()}")
+    print(f"JS path exists: {js_path.exists()}")
+    if static_path.exists():
+        print("Static directory contents:", list(static_path.glob("**/*")))
+        print("JS directory contents:", list(js_path.glob("*")))
+
     # Add debug logging for static file serving
     print(f"Static path: {static_path}")
     print(f"Static path exists: {static_path.exists()}")
