@@ -1,18 +1,396 @@
 {
- "businesses": [
-   {
-     "business_name": "Downtown Seattle Dentists",
-     "matched_name": "DOWNTOWN SEATTLE DENTISTS",
-     "yelp_url": "https://www.yelp.com/biz/downtown-seattle-dentists-seattle",
-     "message": "Found exact name match",
-     "uuid": "cf1551af-04cd-44ce-84c8-7b81a5f5cb98"
-   },
-   {
-     "business_name": "3Rd & Columbia Dental",
-     "matched_name": "3rd & Columbia Dental",
-     "yelp_url": "https://www.yelp.com/biz/3rd-and-columbia-dental-seattle-3",
-     "message": "Found exact name match",
-     "uuid": "c3115d28-4237-4fe2-825c-99bddd2a3741"
-   }
- ]
+  "businesses": [
+    {
+      "business_name": "Downtown Seattle Dentists",
+      "matched_name": "Downtown Seattle Dentists",
+      "yelp_url": "https://www.yelp.com/biz/downtown-seattle-dentists-seattle",
+      "message": "Found exact name match",
+      "uuid": "d3172ee8-36e7-447b-80e8-53bd104e21cd"
+    },
+    {
+      "business_name": "3Rd & Columbia Dental",
+      "matched_name": "3rd & Columbia Dental",
+      "yelp_url": "https://www.yelp.com/biz/3rd-and-columbia-dental-seattle-3",
+      "message": "Found exact name match",
+      "uuid": "c29ba5cf-53b9-4787-9c56-caf976b9290c"
+    },
+    {
+      "business_name": "Neighborcare Health At Pacific Tower Dental",
+      "matched_name": "NEIGHBORCARE HEALTH AT PACIFIC TOWER",
+      "yelp_url": "https://www.yelp.com/biz/neighborcare-health-at-pacific-tower-seattle",
+      "message": "Found fuzzy name match",
+      "uuid": "910478f5-2f30-4a04-bf98-19ee35d0207e"
+    },
+    {
+      "business_name": "2200 Westlake Dentistry",
+      "matched_name": "2200 Westlake Dentistry",
+      "yelp_url": "https://www.yelp.com/biz/2200-westlake-dentistry-seattle",
+      "message": "Exact business page match found",
+      "uuid": "795d469d-cd13-4fed-ae69-2a408786347c"
+    },
+    {
+      "business_name": "Belltown Modern Dentistry",
+      "matched_name": "Belltown Modern Dentistry",
+      "yelp_url": "https://www.yelp.com/biz/belltown-modern-dentistry-seattle",
+      "message": "Found exact name match",
+      "uuid": "61ba40e8-0492-4632-8dd4-ae439a619e45"
+    },
+    {
+      "business_name": "Slu Dental Group",
+      "matched_name": "SLU Dental Group",
+      "yelp_url": "https://www.yelp.com/biz/slu-dental-group-seattle",
+      "message": "Exact business page match found",
+      "uuid": "d5c20b65-3b1c-4dca-a0c2-fbf1cc179678"
+    },
+    {
+      "business_name": "Capitol Hill Seattle Dentist",
+      "matched_name": "CAPITOL HILL SEATTLE DENTIST",
+      "yelp_url": "https://www.yelp.com/biz/capitol-hill-seattle-dentist-seattle",
+      "message": "Found exact name match",
+      "uuid": "2df9e828-e860-42ca-971c-c1f73ad4ef53"
+    },
+    {
+      "business_name": "Nigel W Saw Dds Pc",
+      "matched_name": "Nigel Saw, DDS",
+      "yelp_url": "https://www.yelp.com/biz/nigel-saw-dds-seattle",
+      "message": "Fuzzy business name match found",
+      "uuid": "c14b165e-8645-409f-8639-55279b6a8f0d"
+    },
+    {
+      "business_name": "South Lake Union Dentist Office",
+      "matched_name": "South Lake Union Dentist Office",
+      "yelp_url": "https://www.yelp.com/biz/south-lake-union-dentist-office-seattle",
+      "message": "Found exact name match",
+      "uuid": "797fe5a3-b4f2-4c84-8699-29e9651a84f5"
+    },
+    {
+      "business_name": "8 To 8 Dental Broadway",
+      "matched_name": "8 to 8 Dental - Capitol Hill",
+      "yelp_url": "https://www.yelp.com/biz/8-to-8-dental-capitol-hill-seattle-2",
+      "message": "Fuzzy business name match found",
+      "uuid": "5b741f31-4971-4cd9-853e-d81f4bcf1ac5"
+    },
+    {
+      "business_name": "Gloria E Tucker Dds Ps",
+      "matched_name": "GLORIA E TUCKER, DDS",
+      "yelp_url": "https://www.yelp.com/biz/gloria-e-tucker-dds-seattle",
+      "message": "Found fuzzy name match",
+      "uuid": "706fae4b-6847-497f-acb0-6f9327e756bf"
+    },
+    {
+      "business_name": "Dentologie Pc",
+      "matched_name": "Dentologie - South Loop",
+      "yelp_url": "https://www.yelp.com/biz/dentologie-south-loop-chicago",
+      "message": "Found fuzzy name match",
+      "uuid": "84ee8d64-1c5f-4533-915c-63700c81b7b4"
+    },
+    {
+      "business_name": "Rami D Salha Dds Pllc",
+      "matched_name": "",
+      "yelp_url": "",
+      "message": "No direct Yelp business page found",
+      "uuid": "aaa313f4-4d51-4806-a8c7-cb387e39ab58"
+    },
+    {
+      "business_name": "H Shin Dds Pllc",
+      "matched_name": "",
+      "yelp_url": "",
+      "message": "No direct Yelp business page found",
+      "uuid": "92fb3292-7e65-4c3a-98e9-5a5870dc0533"
+    },
+    {
+      "business_name": "Gateway Dental",
+      "matched_name": "Gateway Dental",
+      "yelp_url": "https://www.yelp.com/biz/gateway-dental-seattle-2",
+      "message": "Found exact name match",
+      "uuid": "088855cc-e6de-4716-b0a8-aa17e5098011"
+    },
+    {
+      "business_name": "Mark Waind Dds Ps",
+      "matched_name": "MARK WAIND, DDS, PS",
+      "yelp_url": "https://www.yelp.com/biz/mark-waind-dds-ps-seattle",
+      "message": "Found exact name match",
+      "uuid": "98f41faa-8a3f-44d4-88a2-51542250abd5"
+    },
+    {
+      "business_name": "Ichs International District Medical & Dental Clinic",
+      "matched_name": "ICHS INTERNATIONAL DISTRICT MEDICAL & DENTAL CLINIC",
+      "yelp_url": "https://www.yelp.com/biz/ichs-international-district-medical-and-dental-clinic-seattle-2",
+      "message": "Found exact name match",
+      "uuid": "c0092598-dac0-4b10-bd7c-f6a4ec5d4b98"
+    },
+    {
+      "business_name": "L Thomas Miller Dds Pc",
+      "matched_name": "",
+      "yelp_url": "",
+      "message": "No direct Yelp business page found",
+      "uuid": "f4761743-53f8-47dc-8218-c80ed3945ccd"
+    },
+    {
+      "business_name": "Richard Y Miyata",
+      "matched_name": "RICHARD MIYATA DDS ZEN DENTAL CENTER",
+      "yelp_url": "https://www.yelp.com/biz/richard-miyata-dds-zen-dental-center-seattle-5",
+      "message": "Found fuzzy name match",
+      "uuid": "c4ce56d3-a6fd-4b92-83ec-1b5bb99acea2"
+    },
+    {
+      "business_name": "Capitol Hill Dental Group",
+      "matched_name": "CAPITOL HILL DENTAL GROUP",
+      "yelp_url": "https://www.yelp.com/biz/capitol-hill-dental-group-seattle",
+      "message": "Found exact name match",
+      "uuid": "ea6239dd-92c8-40c5-8a72-6c135e2b5b90"
+    },
+    {
+      "business_name": "Dr Mark Veigl Dds Ps Inc",
+      "matched_name": "MARK VEIGL, DDS",
+      "yelp_url": "https://www.yelp.com/biz/mark-veigl-dds-seattle",
+      "message": "Found fuzzy name match",
+      "uuid": "a5b0884a-e40c-4246-a62e-1d55bf2c95ea"
+    },
+    {
+      "business_name": "Simply Dental",
+      "matched_name": "Simply Dental",
+      "yelp_url": "https://www.yelp.com/biz/simply-dental-seattle-2",
+      "message": "Found exact name match",
+      "uuid": "03147b31-636f-4437-a113-3d52613070bd"
+    },
+    {
+      "business_name": "Dentist Downtown Seattle",
+      "matched_name": "Dentist Downtown Seattle",
+      "yelp_url": "https://www.yelp.com/biz/dentist-downtown-seattle-seattle",
+      "message": "Found exact name match",
+      "uuid": "3bd6db9f-4981-404b-998b-dbb96bfd72b0"
+    },
+    {
+      "business_name": "Barry Kaimakis",
+      "matched_name": "Barry W. Kaimakis DDS, PS",
+      "yelp_url": "https://www.yelp.com/biz/barry-w-kaimakis-dds-ps-seattle",
+      "message": "Found fuzzy name match",
+      "uuid": "361af0e7-fde9-4560-9538-9b05e7ac59a4"
+    },
+    {
+      "business_name": "Sugandh Relan Dds Pllc",
+      "matched_name": "",
+      "yelp_url": "",
+      "message": "No direct Yelp business page found",
+      "uuid": "a72902f4-54c6-48d9-b566-0fc9f6018cd3"
+    },
+    {
+      "business_name": "Seattles Capitol Hill Dentist",
+      "matched_name": "SEATTLE'S CAPITOL HILL DENTIST",
+      "yelp_url": "https://www.yelp.com/biz/seattle-s-capitol-hill-dentist-seattle",
+      "message": "Found exact name match",
+      "uuid": "bda92dfa-b43d-4768-9068-6add61299220"
+    },
+    {
+      "business_name": "John L Starks Dds Pllc",
+      "matched_name": "John L Starks, DDS",
+      "yelp_url": "https://www.yelp.com/biz/john-l-starks-dds-seattle-2",
+      "message": "Found fuzzy name match",
+      "uuid": "d23e0435-6c1b-4273-a5ee-2f4b2fde3f9c"
+    },
+    {
+      "business_name": "Jeany J Lee Dds Ps",
+      "matched_name": "",
+      "yelp_url": "",
+      "message": "No direct Yelp business page found",
+      "uuid": "6665c7c6-f534-42fa-ad88-81619271882a"
+    },
+    {
+      "business_name": "First Hill Dental Center",
+      "matched_name": "First Hill Dental Center",
+      "yelp_url": "https://www.yelp.com/biz/first-hill-dental-center-seattle",
+      "message": "Found exact name match",
+      "uuid": "2d6093db-c509-43b4-a085-9c32ffdaeabe"
+    },
+    {
+      "business_name": "David J Olson Dds Pllc",
+      "matched_name": "",
+      "yelp_url": "",
+      "message": "No direct Yelp business page found",
+      "uuid": "c5300dae-709d-4087-9d4b-e79dbcf87267"
+    },
+    {
+      "business_name": "Innovative Dentistry",
+      "matched_name": "Innovative Dentistry",
+      "yelp_url": "https://www.yelp.com/biz/innovative-dentistry-seattle-2",
+      "message": "Found exact name match",
+      "uuid": "dae8836b-f6e6-4a6a-933a-960f4a5c24b1"
+    },
+    {
+      "business_name": "Pinnacle Dental Care",
+      "matched_name": "Pinnacle Dental Care",
+      "yelp_url": "https://www.yelp.com/biz/pinnacle-dental-care-seattle",
+      "message": "Found exact name match",
+      "uuid": "2cc56118-6a17-4f99-844f-226727b787dd"
+    },
+    {
+      "business_name": "Dental@888",
+      "matched_name": "",
+      "yelp_url": "",
+      "message": "No direct Yelp business page found",
+      "uuid": "c2239cc9-2d60-45c8-affa-4dfc4e8e31c7"
+    },
+    {
+      "business_name": "Prestige Family And Cosmetic Dentistry",
+      "matched_name": "",
+      "yelp_url": "",
+      "message": "No direct Yelp business page found",
+      "uuid": "212c3ef3-cd34-4940-8482-65b0b567b49e"
+    },
+    {
+      "business_name": "Bridget Singh Dds Pllc",
+      "matched_name": "Bridget Singh, DDS",
+      "yelp_url": "https://www.yelp.com/biz/bridget-singh-dds-seattle",
+      "message": "Found fuzzy name match",
+      "uuid": "fb53c87a-c3f0-4655-976a-adde3efa8540"
+    },
+    {
+      "business_name": "Nicholas Koogler Dds Pllc",
+      "matched_name": "Cascade Integrative Dentistry",
+      "yelp_url": "https://www.yelp.com/biz/cascade-integrative-dentistry-seattle-2",
+      "message": "Found fuzzy name match",
+      "uuid": "9cafb42f-00fc-46e9-b31f-fca5f6beb240"
+    },
+    {
+      "business_name": "Joseph Zimmer Dds",
+      "matched_name": "Joseph Zimmer, DDS",
+      "yelp_url": "https://www.yelp.com/biz/joseph-zimmer-dds-seattle",
+      "message": "Found fuzzy name match",
+      "uuid": "a5c5ae3c-3003-4668-80d0-c046bd4f0de9"
+    },
+    {
+      "business_name": "5Th And Olive Dental",
+      "matched_name": "5th & Olive Dental",
+      "yelp_url": "https://www.yelp.com/biz/5th-and-olive-dental-seattle-3",
+      "message": "Found fuzzy name match",
+      "uuid": "62b6b93c-453f-4bab-adc0-f5be62d5eac6"
+    },
+    {
+      "business_name": "Revive Smiles Dentistry",
+      "matched_name": "Revive Smiles Dentistry",
+      "yelp_url": "https://www.yelp.com/biz/revive-smiles-dentistry-seattle",
+      "message": "Found exact name match",
+      "uuid": "3d2755a0-4ba6-4617-80cb-532223897016"
+    },
+    {
+      "business_name": "J Brewster Bede Dds Ps",
+      "matched_name": "Bede & Carmody General Dentistry",
+      "yelp_url": "https://www.yelp.com/biz/bede-and-carmody-general-dentistry-seattle",
+      "message": "Found fuzzy name match",
+      "uuid": "f735ed14-9579-4378-b20b-314f3df88f36"
+    },
+    {
+      "business_name": "Cindy L Tseng Dds Pllc",
+      "matched_name": "",
+      "yelp_url": "",
+      "message": "No direct Yelp business page found",
+      "uuid": "e341ca9a-df0b-47bf-b149-a10f957cd770"
+    },
+    {
+      "business_name": "Pike Place Dental",
+      "matched_name": "Pike Place Dental",
+      "yelp_url": "https://www.yelp.com/biz/pike-place-dental-seattle",
+      "message": "Found exact name match",
+      "uuid": "75996ab2-fc56-497b-8624-8e77682524d4"
+    },
+    {
+      "business_name": "Abu & Del Rosario Pllc",
+      "matched_name": "",
+      "yelp_url": "",
+      "message": "No direct Yelp business page found",
+      "uuid": "72e35d56-ce01-4c89-ae89-abdac7a52fa6"
+    },
+    {
+      "business_name": "Dr Thomas Vo Dds",
+      "matched_name": "VO THOMAS L, DDS",
+      "yelp_url": "https://www.yelp.com/biz/vo-thomas-l-dds-seattle-2",
+      "message": "Found fuzzy name match",
+      "uuid": "aed0527b-80f6-41ca-a229-0847b4cb79ce"
+    },
+    {
+      "business_name": "Smiles Matters Inc",
+      "matched_name": "Smile Matters Inc., Esi Quaidoo, DDS",
+      "yelp_url": "https://www.yelp.com/biz/smile-matters-inc-esi-quaidoo-dds-seattle-3",
+      "message": "Found fuzzy name match",
+      "uuid": "adcf2aff-9f10-43d3-905d-864221a463ac"
+    },
+    {
+      "business_name": "James St Nguyen Dmd Ps",
+      "matched_name": "",
+      "yelp_url": "",
+      "message": "No direct Yelp business page found",
+      "uuid": "819e8fd9-0408-46fa-ba67-1a71b8575137"
+    },
+    {
+      "business_name": "The Dental Shoppe",
+      "matched_name": "The Dental Shoppe",
+      "yelp_url": "https://www.yelp.com/biz/the-dental-shoppe-seattle-3",
+      "message": "Found exact name match",
+      "uuid": "cc446fba-4f7e-49f2-9b0e-30bd210b2b2a"
+    },
+    {
+      "business_name": "Seattle Sound Dental",
+      "matched_name": "Seattle Sound Dental",
+      "yelp_url": "https://www.yelp.com/biz/seattle-sound-dental-seattle-3",
+      "message": "Found exact name match",
+      "uuid": "d2ad0310-ee2e-4436-97e2-5b79c53e9b90"
+    },
+    {
+      "business_name": "Aesthetic Dental Associates",
+      "matched_name": "Aesthetic Dental Associates",
+      "yelp_url": "https://www.yelp.com/biz/aesthetic-dental-associates-seattle",
+      "message": "Found exact name match",
+      "uuid": "550c044f-5e52-43dd-8932-d5362ba032b5"
+    },
+    {
+      "business_name": "Avenue Smiles",
+      "matched_name": "Avenue Smiles",
+      "yelp_url": "https://www.yelp.com/biz/avenue-smiles-seattle",
+      "message": "Found exact name match",
+      "uuid": "be38eec7-156e-41ea-8c86-1874ecf353f1"
+    },
+    {
+      "business_name": "Union Street Dental",
+      "matched_name": "Union Street Dental",
+      "yelp_url": "https://www.yelp.com/biz/union-street-dental-seattle",
+      "message": "Found exact name match",
+      "uuid": "a7928bcd-8f4a-4662-bf46-4569a237c44b"
+    },
+    {
+      "business_name": "Advanced Dentistry At Century Square",
+      "matched_name": "Advanced Dentistry At Century Square",
+      "yelp_url": "https://www.yelp.com/biz/advanced-dentistry-at-century-square-seattle",
+      "message": "Found exact name match",
+      "uuid": "b4fa78ff-bb61-40bf-893e-89a05fa5b1c9"
+    },
+    {
+      "business_name": "Jaime J Lee Dds Pllc",
+      "matched_name": "Jaime Lee, DDS",
+      "yelp_url": "",
+      "message": "No direct Yelp business page found",
+      "uuid": "fddcfe2f-bf1c-4d89-b029-f47839f0bb6f"
+    },
+    {
+      "business_name": "Smiles On Madison",
+      "matched_name": "SMILES ON MADISON",
+      "yelp_url": "https://www.yelp.com/biz/smiles-on-madison-seattle",
+      "message": "Found exact name match",
+      "uuid": "b2be62c1-9906-46bc-9445-6f429562646b"
+    },
+    {
+      "business_name": "Madrona Family Dental",
+      "matched_name": "LOREN A TARR, DDS",
+      "yelp_url": "https://www.yelp.com/biz/loren-a-tarr-dds-seattle",
+      "message": "Found fuzzy name match (operating as Madrona Family Dentistry)",
+      "uuid": "c46a6960-885e-46d3-a2ec-0415f2ba6f4b"
+    },
+    {
+      "business_name": "Seattle Cornerstone Dental",
+      "matched_name": "SEATTLE CORNERSTONE DENTAL",
+      "yelp_url": "https://www.yelp.com/biz/seattle-cornerstone-dental-seattle-2",
+      "message": "Found exact name match",
+      "uuid": "ca53af24-39ab-4ad0-856a-798bf3832ee7"
+    }
+  ]
 }
