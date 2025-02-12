@@ -32,10 +32,10 @@ async function postYaml(index) {
 
     const data = await response.json()
     const message = {
-      action: "setUUID",
-      uuid: business.uuid,
-    }
-    window.postMessage(message, "*")
+      action: 'setUUID',
+      uuid: business.uuid
+    };
+    window.postMessage(message, '*');
 
     resultDiv.className = "success"
     if (business.yelp_url) {
@@ -55,7 +55,7 @@ function createBusinessPreview(business) {
   Matched Name: "${business.matched_name}"
   UUID: "${business.uuid}"
   Message: "${business.message}"
-  ${business.yelp_url ? `Yelp URL: "${business.yelp_url}"` : "No Yelp URL available"}`
+  ${business.yelp_url ? `Yelp URL: "${business.yelp_url}"` : 'No Yelp URL available'}`
 }
 
 function renderBusinessList() {
@@ -65,16 +65,18 @@ function renderBusinessList() {
     console.error("Container not found!")
     return
   }
-
-  container.innerHTML = ""
-
+  
+  container.innerHTML = ''
+  
   businesses.businesses.forEach((business, index) => {
     const section = document.createElement("div")
     section.className = "yaml-section"
-
+    
     const hasYelpUrl = business.yelp_url && business.yelp_url.length > 0
-    const buttonText = hasYelpUrl ? `POST and View on Yelp` : `POST Business Data`
-
+    const buttonText = hasYelpUrl ? 
+      `POST and View on Yelp` : 
+      `POST Business Data`
+    
     section.innerHTML = `
       <h2>${business.business_name}</h2>
       <a href="#" class="button" onclick="postYaml(${index}); return false;">${buttonText}</a>
@@ -90,3 +92,4 @@ document.addEventListener("DOMContentLoaded", loadBusinesses)
 if (document.readyState === "complete") {
   loadBusinesses()
 }
+
