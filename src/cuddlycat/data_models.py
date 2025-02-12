@@ -1,8 +1,8 @@
-import pydantic
-import typing
+from pydantic import BaseModel, Field
+from typing import Optional
 
 
-class Business(pydantic.BaseModel):
+class Business(BaseModel):
     """
     Represents a business entity with its details and matching information.
 
@@ -14,16 +14,14 @@ class Business(pydantic.BaseModel):
         uuid (str): A unique identifier for the business entry.
     """
 
-    business_name: str = pydantic.Field(..., description="Original business name")
-    matched_name: str = pydantic.Field(default="", description="Matched business name")
-    yelp_url: typing.Optional[str] = pydantic.Field(
-        default="", description="Yelp business page URL"
-    )
-    message: str = pydantic.Field(..., description="Matching or status message")
-    uuid: str = pydantic.Field(..., description="Unique identifier")
+    business_name: str = Field(..., description="Original business name")
+    matched_name: str = Field(default="", description="Matched business name")
+    yelp_url: Optional[str] = Field(default="", description="Yelp business page URL")
+    message: str = Field(..., description="Matching or status message")
+    uuid: str = Field(..., description="Unique identifier")
 
 
-class PageContent(pydantic.BaseModel):
+class PageContent(BaseModel):
     """
     Represents the content of a web page.
 
@@ -38,7 +36,7 @@ class PageContent(pydantic.BaseModel):
     data: str
 
 
-class PageMetadata(pydantic.BaseModel):
+class PageMetadata(BaseModel):
     """
     Represents metadata about a web page.
 
@@ -57,7 +55,7 @@ class PageMetadata(pydantic.BaseModel):
     uuid: str
 
 
-class PageData(pydantic.BaseModel):
+class PageData(BaseModel):
     """
     Combines metadata and content for a complete page representation.
 
